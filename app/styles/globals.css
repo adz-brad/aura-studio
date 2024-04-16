@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type=text], input[type=password], input[type=number], textarea, select {
+    @apply bg-transparent border-0 border-b focus:border-brand-600 focus:ring-0;
+}
+
+.button {
+    @apply font-medium text-base-50 border px-4 py-2 hover:bg-brand-600 hover:border-brand-600 transition-all duration-200;
+}
+
+input[type=file]::file-selector-button {
+    @apply bg-base-950 button border-2 border-base-50 px-4 py-2;
+}
+
+.split { @apply flex flex-row grow h-full }
+
+.gutter { @apply relative bg-base-300/70 bg-no-repeat bg-[50%] cursor-pointer rounded-full}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    @apply cursor-col-resize;
+}
+
+.pageInput {
+    @apply w-full;
+}
+
+.pageInput textarea, .pageInput input {
+    @apply text-sm px-0;
+}
+
+input[type=number].numberInput::-webkit-outer-spin-button, input[type=number].numberInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number].numberInput {
+  -moz-appearance: textfield;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    @apply focus:ring-0 focus:ring-offset-0;
+  }
+
+.ql-toolbar.ql-snow {
+    @apply border-none;
+}
+
+.twScroll {
+    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-base-700/50 hover:scrollbar-thumb-brand-500;
+}
+
+.twScroll::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+}
